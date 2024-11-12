@@ -1,4 +1,4 @@
-module github.com/notnil/chess
+module github.com/endermn/Chlib
 
 go 1.14
 
