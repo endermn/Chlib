@@ -226,6 +226,7 @@ func (g *Game) FlipTurn() {
 
 func (g *Game) SetTurn(color Color) {
 	g.pos.turn = color
+	g.pos.validMoves = nil
 }
 
 // Method returns the method in which the outcome occurred.
