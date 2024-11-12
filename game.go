@@ -224,6 +224,10 @@ func (g *Game) FlipTurn() {
 	}
 }
 
+func (g *Game) SetTurn(color Color) {
+	g.pos.turn = color
+}
+
 // Method returns the method in which the outcome occurred.
 func (g *Game) Method() Method {
 	return g.method
