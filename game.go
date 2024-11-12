@@ -215,6 +215,15 @@ func (g *Game) Outcome() Outcome {
 	return g.outcome
 }
 
+// Flips the turn in the current position
+func (g *Game) FlipTurn() {
+	if g.pos.turn == White {
+		g.pos.turn = Black
+	} else {
+		g.pos.turn = White
+	}
+}
+
 // Method returns the method in which the outcome occurred.
 func (g *Game) Method() Method {
 	return g.method
