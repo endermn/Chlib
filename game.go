@@ -217,11 +217,8 @@ func (g *Game) Outcome() Outcome {
 
 // Flips the turn in the current position
 func (g *Game) FlipTurn() {
-	if g.pos.turn == White {
-		g.pos.turn = Black
-	} else {
-		g.pos.turn = White
-	}
+	g.pos.turn = g.pos.turn.Other()
+	g.pos.validMoves = nil
 }
 
 func (g *Game) SetTurn(color Color) {
