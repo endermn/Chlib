@@ -50,6 +50,9 @@ func (m *Move) Promo() PieceType {
 
 // HasTag returns true if the move contains the MoveTag given.
 func (m *Move) HasTag(tag MoveTag) bool {
+	if m == nil {
+		return false
+	}
 	return (tag & m.tags) > 0
 }
 
